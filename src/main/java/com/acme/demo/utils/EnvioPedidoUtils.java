@@ -1,7 +1,5 @@
 package com.acme.demo.utils;
 
-import org.springframework.stereotype.Component;
-
 import com.acme.demo.client.model.EnvioPedidoAcme;
 import com.acme.demo.client.model.EnvioPedidoAcmeResponse;
 import com.acme.demo.client.model.EnvioPedidoRequest;
@@ -11,11 +9,14 @@ import com.acme.demo.model.EnviarPedidoDTO;
 import com.acme.demo.model.EnviarPedidoRespuestaDTO;
 import com.acme.demo.model.ResponseEnviarPedidoDTO;
 
-@Component
 public class EnvioPedidoUtils {
 
 	public static EnvioPedidoAcme jsonToXml(EnviarPedidoDTO data) {
 
+		if (data == null) {
+			throw new IllegalArgumentException("El request JSON no puede ser nulo");
+		}
+		
 		EnvioPedidoRequest request = EnvioPedidoRequest.builder()
 				.pedido(data.getNumPedido())
 				.cantidad(data.getCantidadPedido())
