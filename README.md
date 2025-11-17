@@ -37,4 +37,4 @@ Una vez arrancada la app:
 [API-docs](http://localhost:8080/api/acme/api-docs)
 
 ### Notas:
-Ya que actualmente está arrojando un error de certificados y de NOT_FOUND, se hicieron ajustes en código. Para el error de certificados, en la clase de configuración de ApiConfiguration se agregó código para deshabilitar la validación de certificados, pero debe quitarse. Para el error de NOT_FOUND se hizo un endpoint local para poder probar el llamado del servicio; si se quiere probar con el endpoint local, se debe configurar soap.service.url en http://localhost:8080/mock/envio-pedidos
+Ya que actualmente está arrojando un error de certificados y de NOT_FOUND, se hicieron ajustes en código. Para el error de certificados, en la clase de configuración de ApiConfiguration se agregó código para deshabilitar la validación de certificados, pero debe quitarse. Para el error de NOT_FOUND se hizo un endpoint local para poder probar el llamado del servicio; si se quiere probar con el endpoint local, se debe configurar soap.service.url en http://localhost:8080/api/acme/mock/envio-pedidos
