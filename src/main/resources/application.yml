@@ -1,6 +1,9 @@
 spring:
   application:
     name: demo-acme
+server:
+  servlet:
+    context-path: /api/acme
 springdoc:
   api-docs:
     path: /api-docs

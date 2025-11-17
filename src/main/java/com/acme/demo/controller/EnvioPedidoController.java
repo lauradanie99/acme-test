@@ -13,7 +13,7 @@ import com.acme.demo.service.EnvioPedidoService;
 import lombok.AllArgsConstructor;
 
 @RestController
-@RequestMapping("/api/pedidos")
+@RequestMapping("/pedidos")
 @AllArgsConstructor
 public class EnvioPedidoController {
 
